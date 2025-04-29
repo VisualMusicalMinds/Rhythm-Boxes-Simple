@@ -359,7 +359,19 @@ cells.forEach((cell, idx) => {
   cell.addEventListener("click", function() {
     // Don't overwrite if clicking to remove a box:
     if (cell.dataset.permanent && selectedLength === null) return;
-       
+
+    // ---- NEW RULE: Prevent quarter/eighth notes on even-numbered boxes ----
+    // Musical even numbers: indices 1,3,5,7,9,11,13,15
+    if (
+      selectedLength &&
+      (selectedLength === 4 || selectedLength === 2) &&
+      [1,3,5,7,9,11,13,15].includes(idx)
+    ) {
+      grid.classList.add("shake");
+      setTimeout(() => grid.classList.remove("shake"), 300);
+      return; // Don't attempt to place
+    }
+
     // === SHAKING IF IT WON'T FIT ===
     if (
       selectedLength && selectedColor &&

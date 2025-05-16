@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rhythm Boxes</title>
+  <title>RhythmCraft Basics</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +15,12 @@
         <!-- The 16th note option has been removed -->
       </div>
       <div class="controls-row">
-        <label for="tempoInput">BPM</label>
-        <input id="tempoInput" type="number" value="90" />
-        <button id="playButton">▶️ Play / Stop</button>
-        <button id="clearButton">🧹 Clear All</button>
-      </div>
+  <label for="tempoInput">BPM</label>
+  <input id="tempoInput" type="number" value="90" />
+  <input type="checkbox" id="tickMute" class="tick-mute-checkbox" checked>
+  <button id="playButton">▶️ Play / Stop</button>
+  <button id="clearButton">🧹 Clear All</button>
+</div>
       <div class="sound-mode-row">
         <label>
           <input type="radio" name="soundMode" value="drum" checked>

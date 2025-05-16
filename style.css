@@ -219,3 +219,10 @@ body {
   font-size: 1em;
   margin-left: 1vw;
 }
+.tick-mute-checkbox {
+  width: 1.5em;
+  height: 1.5em;
+  accent-color: #0078D4;
+  vertical-align: middle;
+  cursor: pointer;
+}
